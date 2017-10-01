@@ -675,6 +675,10 @@ section.carousel .fill {
 	font-size:65px;
 	color:#FFF;
 	font-weight:800;
+
+  @media (max-width: @screen-xs-max) {
+    font-size:32px;
+  }
 }
 
 .carousel-caption p {
