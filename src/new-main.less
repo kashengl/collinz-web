@@ -1,0 +1,163 @@
+//@author: sern
+// doing css in less's way
+
+//variable
+@import "variables.less";
+
+//Color Variables Declaration Begin----------
+@theme-orange :#f08423;
+@theme-blue   :#425fac;
+//Color Variables Declaration End----------
+
+
+//Font Method Declaration Begin-------------
+@font-option-SourceSansPro       : 'Source Sans Pro', sans-serif;
+
+.apply-font-sourcesans-regular(@size) 
+{
+  font-family: @font-option-SourceSansPro;
+  font-size  : @size;
+}
+
+.apply-font-sourcesans-bold(@size) 
+{
+  font-family: @font-option-SourceSansPro;
+  font-size  : @size;
+  font-weight: 600;
+}
+
+//Font Method Declaration End-------------
+
+//global
+.paddingZero
+{
+  padding: 0px !important;
+}
+
+.displayNone
+{
+  display: none !important;
+}
+//
+
+// #header {
+  .new-top-bar{
+    .paddingZero;
+
+    div{
+      padding: 25px 18px 25px 18px;
+      float: left;
+      &:nth-child(1)
+      {
+        width: 40%;
+        padding: 18px;
+        text-align: right;
+        img{
+          // width: 100%;
+          height: 65px;
+        }
+      }
+
+      &:nth-child(2)
+      {
+        width: 30%; 
+        background-color: @theme-orange;
+        border-left: 1px solid @theme-orange;
+
+        .hoverActive{
+          display: none;
+          border-left: 1px;
+          img{
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+            &:hover
+            {
+               -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+              filter: grayscale(0%);
+            }
+          }
+        }
+
+        &:hover
+        {
+          cursor: pointer;
+          background-color: white;
+          padding: 20px 18px 20px 18px;
+
+          .default
+          {
+            display: none;  
+          }
+          
+          .hoverActive
+          {
+            display: block;
+          }
+        }
+      }
+      &:nth-child(3)
+      {
+        width: 30%; 
+        background-color: @theme-blue;
+
+        .hoverActive{
+          display: none;
+          span{
+            color:grey;
+            .apply-font-sourcesans-bold(18px);
+
+            &:hover
+            {
+              color:@theme-orange;
+            }
+
+            &:nth-child(1),&:nth-child(2),&:nth-child(3)
+            {
+              padding-right: 30px;
+            }
+          }
+        }
+
+        &:hover
+        {
+          cursor: pointer;
+          background-color: white;
+          padding: 38px 18px 38px 18px;
+
+          .default
+          {
+            display: none;  
+          }
+          
+          .hoverActive
+          {
+            display: block;
+          }
+        }
+      }
+
+      h1{
+        text-align: right;
+        color: white;
+        margin: 0px;
+        .apply-font-sourcesans-bold(30px);
+      }
+
+      h2{
+        text-align: right;
+        color: white;
+        margin: 0px;
+        .apply-font-sourcesans-bold(18px);
+      }
+    }
+  }
+
+  @media (max-width: @screen-xs-max) {
+    .new-top-bar
+    {
+      display: none;
+    }
+  }
+// }
+
+//end of sern

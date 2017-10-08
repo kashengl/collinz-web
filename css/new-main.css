@@ -1,0 +1,104 @@
+.paddingZero {
+  padding: 0px !important;
+}
+.displayNone {
+  display: none !important;
+}
+.new-top-bar {
+  padding: 0px !important;
+}
+.new-top-bar div {
+  padding: 25px 18px 25px 18px;
+  float: left;
+}
+.new-top-bar div:nth-child(1) {
+  width: 40%;
+  padding: 18px;
+  text-align: right;
+}
+.new-top-bar div:nth-child(1) img {
+  height: 65px;
+}
+.new-top-bar div:nth-child(2) {
+  width: 30%;
+  background-color: #f08423;
+  border-left: 1px solid #f08423;
+}
+.new-top-bar div:nth-child(2) .hoverActive {
+  display: none;
+  border-left: 1px;
+}
+.new-top-bar div:nth-child(2) .hoverActive img {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.new-top-bar div:nth-child(2) .hoverActive img:hover {
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+.new-top-bar div:nth-child(2):hover {
+  cursor: pointer;
+  background-color: white;
+  padding: 20px 18px 20px 18px;
+}
+.new-top-bar div:nth-child(2):hover .default {
+  display: none;
+}
+.new-top-bar div:nth-child(2):hover .hoverActive {
+  display: block;
+}
+.new-top-bar div:nth-child(3) {
+  width: 30%;
+  background-color: #425fac;
+}
+.new-top-bar div:nth-child(3) .hoverActive {
+  display: none;
+}
+.new-top-bar div:nth-child(3) .hoverActive span {
+  color: grey;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.new-top-bar div:nth-child(3) .hoverActive span:hover {
+  color: #f08423;
+}
+.new-top-bar div:nth-child(3) .hoverActive span:nth-child(1),
+.new-top-bar div:nth-child(3) .hoverActive span:nth-child(2),
+.new-top-bar div:nth-child(3) .hoverActive span:nth-child(3) {
+  padding-right: 30px;
+}
+.new-top-bar div:nth-child(3):hover {
+  cursor: pointer;
+  background-color: white;
+  padding: 38px 18px 38px 18px;
+}
+.new-top-bar div:nth-child(3):hover .default {
+  display: none;
+}
+.new-top-bar div:nth-child(3):hover .hoverActive {
+  display: block;
+}
+.new-top-bar div h1 {
+  text-align: right;
+  color: white;
+  margin: 0px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.new-top-bar div h2 {
+  text-align: right;
+  color: white;
+  margin: 0px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .new-top-bar {
+    display: none;
+  }
+}
