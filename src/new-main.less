@@ -420,7 +420,6 @@
 
 .academic
 {
-  
   .row
   {
     &:nth-child(1)
@@ -444,6 +443,7 @@
     top: 55px;
   }
   .right{
+    overflow:hidden;
     position: absolute;
     right: 0;
     width: 68%;
@@ -479,6 +479,14 @@
 
 .academic, .tutorial
 {
+  .container
+  {
+    &:nth-child(1)
+    {
+      width: 100%;
+    }
+  }
+
   .background-text
   {
     h2{
