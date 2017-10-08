@@ -322,7 +322,48 @@
 
 .academic
 {
-  min-height: 430px;
+  
+  .row
+  {
+    &:nth-child(1)
+    {
+      min-height: 430px;
+    }
+    &:nth-child(2)
+    {
+      margin-top: -50px;
+      padding-bottom: 150px;
+      div{
+        z-index: 2;
+      }
+    }
+  }
+
+  .left{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: 55px;
+  }
+  .right{
+    position: absolute;
+    right: 0;
+    width: 68%;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    padding: 50px 20px 50px 70px;
+  }
+}
+
+.tutorial
+{
+  .row
+  {
+    &:nth-child(1)
+    {
+      min-height: 430px;
+    }
+  }
+  
   .left{
     position: absolute;
     left: 0;
