@@ -638,6 +638,26 @@ $(document).ready(function(){
 		var activeAttr = $(this).data("tab")
 		$('.Panel__body'+'.'+activeAttr).addClass('active');
 	})
+
+	$(window).bind('scroll', function(e){
+		parallaxScroll();
+	});
+	function parallaxScroll(){
+		var scrolledY = $(window).scrollTop();
+
+		if($(this).scrollTop()>=$('.academic').position().top && $(this).scrollTop()<=$('.academic').position().top + $('.academic').height() ){
+	        // yourActionHere();
+	        console.log(scrolledY);
+	    }
+
+		
+		// console.log($('.vertical.left').css('top'));
+		// $('.vertical.left').css('top', ((scrolledY*1.3)) + 'px');
+		// $('.vertical.right').css('top',((scrolledY*1.3)) + 'px');
+		// console.log(((scrolledY*1.3)));
+		// $('.horizontal1').css('left','+' + ((scrolledY*0.2)) + '%');
+		// $('.opacity').css('opacity','0' + (scrolledY*0.001));
+	}
 });
 
 
