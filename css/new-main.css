@@ -105,12 +105,19 @@
 .navbar-nav li {
   text-transform: uppercase;
 }
+#header .nav-book {
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
 #recent-works {
   padding-top: 28px;
   padding-bottom: 44px;
 }
 #recent-works .container {
-  padding-right: 0 180px;
+  padding: 0 180px;
 }
 #recent-works h3 {
   font-family: 'Source Sans Pro', sans-serif;
@@ -119,19 +126,41 @@
   color: #191919;
   text-align: center;
   margin-bottom: 60px;
-}
-#recent-works .Panel__body {
-  background-color: #f2f2f2;
-  padding: 10px 20px;
+  line-height: 30px;
 }
 #recent-works .Panel li {
   cursor: pointer;
 }
 #recent-works .Panel .Panel__body {
   display: none;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.125);
+  padding: 50px;
 }
 #recent-works .Panel .Panel__body.active {
-  display: block;
+  display: flex;
+}
+#recent-works .Panel .Panel__body p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  color: #191919;
+  margin: 0;
+  text-align: left;
+}
+#recent-works .Panel .Panel__body h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  color: #191919;
+  margin-top: 0px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+#recent-works .Panel .Panel__body img {
+  padding-right: 30px;
 }
 #recent-works .Tabs {
   position: relative;
@@ -139,6 +168,25 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+#recent-works .Tabs li:nth-child(1),
+#recent-works .Tabs li:nth-child(2),
+#recent-works .Tabs li:nth-child(3) {
+  padding: 15px 0;
+}
+#recent-works .Tabs li:nth-child(1) img,
+#recent-works .Tabs li:nth-child(2) img,
+#recent-works .Tabs li:nth-child(3) img {
+  width: 70px;
+}
+#recent-works .Tabs li:nth-child(1) h4,
+#recent-works .Tabs li:nth-child(2) h4,
+#recent-works .Tabs li:nth-child(3) h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0px;
 }
 #recent-works .Tabs:after {
   content: ' ';
