@@ -639,40 +639,13 @@ $(document).ready(function(){
 		$('.Panel__body'+'.'+activeAttr).addClass('active');
 	})
 
+	//parallax
 	$(window).paroller();
-	// $(".vertical.left").paroller({ factor: '0.5', type: 'foreground', direction: 'horizontal' });
 
-
-	// var previousScroll = 0;
-	// $(window).bind('scroll', function(e){
-	// 	// parallaxScroll();
-	// 	var scrolledY = $(window).scrollTop();
-
-	// 	if($(this).scrollTop()>=$('.academic').position().top -200 && $(this).scrollTop()<=$('.academic').position().top - 200 + 430 ){
-
-	//        if (scrolledY > previousScroll){
-	//           var newTop = parseFloat($('.vertical.left').css('top')) - scrolledY*0.001;
-	//           console.log(newTop);
-	//           $('.vertical.left').css('top', newTop + 'px');
-	//        } else {
-	//           var newTop = parseFloat($('.vertical.left').css('top')) + scrolledY*0.001;
-	//           console.log(newTop);
-	//           $('.vertical.left').css('top', newTop + 'px');
-	//        }
-	//        previousScroll = scrolledY;
-	//     }
-	// });
-	// function parallaxScroll(){
-		
-
-		
-	// 	// console.log($('.vertical.left').css('top'));
-	// 	// $('.vertical.left').css('top', ((scrolledY*1.3)) + 'px');
-	// 	// $('.vertical.right').css('top',((scrolledY*1.3)) + 'px');
-	// 	// console.log(((scrolledY*1.3)));
-	// 	// $('.horizontal1').css('left','+' + ((scrolledY*0.2)) + '%');
-	// 	// $('.opacity').css('opacity','0' + (scrolledY*0.001));
-	// }
+	//closing sticky-right-item
+	$('.close').on('click', function() {
+		$('.sticky-right-item').remove();
+	});
 });
 
 
