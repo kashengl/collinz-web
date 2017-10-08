@@ -625,7 +625,39 @@ $(document).ready(function ($) {
 
 
 	
+//sern js
+//source : https://codepen.io/everdimension/pen/xZLggo
+$(document).ready(function(){
+	$('.Tab').on('click',function(){
+		var oldAtr = $('.Tab.active').data("tab");
+		$('.Tab.active').removeClass('active');
+		$('.Panel__body'+'.'+oldAtr).removeClass('active');
 
+		$(this).addClass('active');
+		var activeAttr = $(this).data("tab")
+		$('.Panel__body'+'.'+activeAttr).addClass('active');
+	})
+});
+
+// var tabs = document.getElementsByClassName('Tab');
+
+// Array.prototype.forEach.call(tabs, function(tab) {
+// 	tab.addEventListener('click', setActiveClass);
+// });
+
+// function setActiveClass(evt) {
+// 	Array.prototype.forEach.call(tabs, function(tab) {
+// 		tab.classList.remove('active');
+// 	});
+	
+// 	var panels = document.getElementsByClassName('Panel__body');
+// 	Array.prototype.forEach.call(panels, function(tab) {
+// 		console.log(panels);
+// 	});
+	
+// 	console.log(evt.currentTarget);
+// 	evt.currentTarget.classList.add('active');
+// }
 
 
 
