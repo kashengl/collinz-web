@@ -256,7 +256,8 @@
 .nav.sticky {
   position: fixed;
   z-index: 999;
-  top: -50px;
+  top: -250px;
+  opacity: 0;
 }
 .nav.sticky ul li:nth-child(1) a {
   padding: 0px;

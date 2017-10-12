@@ -651,12 +651,12 @@ $(document).ready(function(){
 	var isStickyShown = false;
 	$(document).on('scroll', function(event) {
 		if($(this).scrollTop()>=$('.nav-desktop').position().top && isStickyShown == false){
-	        $('.nav-sticky').animate({top: "0px"}, 300);
+	        $('.nav-sticky').animate({top: "0px",opacity: "1"}, 300);
 	        isStickyShown = true;
 	    }
 	    else if($(this).scrollTop()<=$('.nav-desktop').position().top && isStickyShown == true)
 	    {
-	    	$('.nav-sticky').animate({top: "-250px"}, 300);
+	    	$('.nav-sticky').animate({top: "-250px",opacity: "0"}, 300);
 	    	isStickyShown = false;
 	    }
 	});
