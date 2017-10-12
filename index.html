@@ -33,18 +33,19 @@
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,600' rel='stylesheet' type='text/css'>
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
     <!-- 
     @author:sern
     overidding previous css
      -->
     <link href="css/new-main.css" rel="stylesheet"> 
-    <link href="css/responsive.css" rel="stylesheet">
     
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,600' rel='stylesheet' type='text/css'>
+    
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -71,11 +72,11 @@
 
 <body class="preload">
 	
-    <!-- <div id="loading">
+    <div id="loading">
         <div id="loading-center">
         	<img class="center-block" src="images/loading.gif"/>
         </div>
-    </div> -->
+    </div>
     
     <div class="sticky-right-item hidden-xs">
         <div>
@@ -157,6 +158,7 @@
         </div>
     </div>
 
+    <!-- normal -->
     <div class="col-xs-12 paddingZero nav nav-desktop hidden-xs">
         <div class="container">
             <div class="desktop">
@@ -167,8 +169,14 @@
                     <li><a href="centres.html">Centres</a><span class="display-none-767">|</span></li>
                     
                     <li><a href="admission.html">Admission</a><span class="display-none-767">|</span></li>
-                    
-                    <li><a href="news-events-annual-awards-2017.html">News & Events</a><span class="display-none-767">|</span></li>
+
+                     <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown-menu"> News & Events</a><span class="display-none-767">|</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Happenings</a></li>
+                            <li><a href="tutorial.html">Academic Calender</a></li>
+                        </ul>
+                    </li>
                     
                     <li><a href="introduction.html">Contact Us</a><span class="display-none-767">|</span></li>
                     
@@ -176,68 +184,10 @@
                 </ul>
             </div>
         </div>
-          <!-- <header id="header"> -->
-            <!-- <nav class="navbar navbar-inverse" role="banner"> -->
-                
-                    <!--  <div class="navbar-header" >
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html"><img class="img-responsive" src="images/logo.png" alt="logo"></a>
-                    </div> 
-                     -->
-                    <!-- <div class="collapse navbar-collapse" > -->
-                        <!-- <ul class="nav navbar-nav">
-                              <li><a href="index.html" class="fix-logo"><img class="img-responsive" src="images/logo.png"/></a></li> <li><a href="introduction.html">About Us</a></li>
-                            <li class="display-none-767">|</li>
-                            <li><a href="admission.html">Admission</a></li>
-                            <li class="display-none-767">|</li>
-                            <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academic</a>
-                                 <ul class="dropdown-menu">
-                                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Full Time</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="sri-botanic.html">Sri Botanic</a></li>
-                                            <li><a href="collinz-international.html">Collinz International</a></li>
-                                            </ul>
-                                        </li>
-                
-                                            
-                                    <li><a href="tutorial.html">Tutorial</a></li>
-                                </ul>
-                            </li>
-                            <li class="display-none-767">|</li>
-                            <li><a href="centres.html">Centres</a></li>
-                            <li class="display-none-767">|</li>
-                            <li><a href="news-events-annual-awards-2017.html">News & Events</a></li>
-                            <li class="display-none-767">|</li>
-                            <li><a href="career.html">Career</a></li>                  
-                        </ul> -->
-
-                        <!-- <ul class="nav navbar-nav">
-                              <li><a href="index.html" class="fix-logo"><img class="img-responsive" src="images/logo.png"/></a></li> <li><a href="introduction.html">About Us</a></li>
-                            <li class="display-none-767">|</li>
-                            <li><a href="centres.html">Centres</a></li>
-                            <li class="display-none-767">|</li>
-                            <li><a href="admission.html">Admission</a></li>
-                            <li class="display-none-767">|</li>
-                            <li><a href="news-events-annual-awards-2017.html">News & Events</a></li>
-                            <li class="display-none-767">|</li>
-                            <li><a href="introduction.html">Contact Us</a></li>
-                            <li class="display-none-767">|</li>
-                            <li><a href="career.html">Career</a></li>                  
-                        </ul> -->
-
-                    <!-- </div> -->
-                <!-- </div>/.container -->
-            <!-- </nav>/nav -->
-            <img class="nav-book" src="images/nav-bar-book.png">    
-        <!-- </header>/header -->
+        <img class="nav-book" src="images/nav-bar-book.png">    
     </div>
 
+    <!-- mobile -->
     <div class="col-xs-12 paddingZero nav-mobile hidden-sm hidden-md hidden-lg">
         <div class="container">
             <a class="logo" href="index.html"><img src="images/logo.png"/></a>
@@ -758,6 +708,13 @@ Bandar Botanic 41200, Klang.
 	  ga('create', 'UA-83692591-1', 'auto');
 	  ga('send', 'pageview');
 
+
+        $(document).ready(function(){
+            //parallax
+            $(window).paroller();
+            
+        });
+      
 	</script>
     
 </body>

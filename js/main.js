@@ -186,17 +186,17 @@ $(document).ready(function ($) {
 	/*	Nice-Scroll
 	/*----------------------------------------------------*/
 	
-	$("html").niceScroll({
-		scrollspeed: 100,
-		mousescrollstep: 38,
-		cursorwidth: 5,
-		cursorborder: 0,
-		cursorcolor: '#333',
-		autohidemode: true,
-		zindex: 999999999,
-		horizrailenabled: false,
-		cursorborderradius: 0,
-	});
+	// $("html").niceScroll({
+	// 	scrollspeed: 100,
+	// 	mousescrollstep: 38,
+	// 	cursorwidth: 5,
+	// 	cursorborder: 0,
+	// 	cursorcolor: '#333',
+	// 	autohidemode: true,
+	// 	zindex: 999999999,
+	// 	horizrailenabled: false,
+	// 	cursorborderradius: 0,
+	// });
 	
 				
 	/*----------------------------------------------------*/
@@ -640,7 +640,7 @@ $(document).ready(function(){
 	})
 
 	//parallax
-	$(window).paroller();
+	// $(window).paroller();
 
 	//closing sticky-right-item
 	$('.close').on('click', function() {
@@ -656,14 +656,15 @@ $(document).ready(function(){
 	    }
 	    else if($(this).scrollTop()<=$('.nav-desktop').position().top && isStickyShown == true)
 	    {
-	    	$('.nav-sticky').animate({top: "-50px"}, 300);
+	    	$('.nav-sticky').animate({top: "-250px"}, 300);
 	    	isStickyShown = false;
 	    }
 	});
 
 	//mobile nav
 	$('.hamburger').on('click', function(event) {
-		$('.nav-mobile').toggleClass('active');
+		console.log('clicked');
+		$('.nav-mobile ').toggleClass('active');
 	});
 });
 
