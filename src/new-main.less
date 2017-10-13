@@ -713,4 +713,68 @@
     }
   }
 }
+
+//happening
+.happening
+{
+  .featured{
+    margin-top: 30px;
+    .img{
+      .center-cropped {
+        float: right;
+        width: 420px;
+        height: 550px;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+    .content{
+      h1{
+        color: @theme-black;
+        .apply-font-sourcesans-regular(60px);
+      }
+      h3{
+        color: @theme-black;
+        margin: 0;
+        .apply-font-sourcesans-bold(24px);
+      }
+      p{
+        color: @theme-black;
+        .apply-font-sourcesans-regular(20px);
+        margin: 0;
+        margin-bottom: 30px;
+        //elipsis
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      .moreinfo
+      {
+        border: 0;
+        box-shadow: none;
+        color:white;
+        background-color: @theme-orange;
+        .apply-font-sourcesans-bold(20px);
+        border-radius: 8px;
+        padding: 7px 15px;
+      }
+    }
+  }
+
+  .happeningSlide
+  {
+    //multi item carousel
+    .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+  }
+}
 //end of sern
