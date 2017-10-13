@@ -216,7 +216,14 @@
     </div>
 
     <div class="col-xs-12">
-      <iframe src="https://calendar.google.com/calendar/embed?src=628cemcs90tcn7l3lo9tlnnaeo%40group.calendar.google.com&ctz=Asia/Kuala_Lumpur" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>  
+      <div class="col-xs-6">
+        <iframe src="https://calendar.google.com/calendar/embed?src=628cemcs90tcn7l3lo9tlnnaeo%40group.calendar.google.com&ctz=Asia/Kuala_Lumpur" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>  
+      </div>
+      <div class="col-xs-6">
+        <ul class="eventlist">
+          
+        </ul>
+      </div>
     </div>
     
 
@@ -251,6 +258,24 @@
             
         });
       
+  </script>
+  <script type="text/javascript">
+    $.get( "https://www.googleapis.com/calendar/v3/calendars/628cemcs90tcn7l3lo9tlnnaeo%40group.calendar.google.com/events?key=AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI", function( data ) {
+      var events = data.items;
+      for(i = 0; i < events.length; i++) { 
+        var oneEvent = events[i];
+        var startDate = oneEvent.start.date;
+        var summary = oneEvent.summary;
+        // console.log(oneEvent.start.date);
+        // console.log(oneEvent.summary);
+        $('.eventlist').append(
+          '<li>'+
+          startDate + " : " + summary +
+          '</li>' 
+        );
+      }
+    });
+    // https://www.googleapis.com/calendar/v3/calendars/628cemcs90tcn7l3lo9tlnnaeo%40group.calendar.google.com/events?key=AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI
   </script>
     
 </body>
