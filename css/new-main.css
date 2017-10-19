@@ -4,6 +4,30 @@
 .displayNone {
   display: none !important;
 }
+html,
+body {
+  height: 100%;
+}
+@media (max-width: 767px) {
+  #index-page .carousel-control {
+    display: none;
+  }
+  #index-page .carousel-section {
+    height: calc(100% - 64px);
+  }
+  #index-page .carousel-section section.carousel {
+    height: 100%;
+  }
+  #index-page .carousel-section section.carousel .center-mobile {
+    background-position: right -315px center;
+  }
+  #index-page .carousel-section section.carousel .carousel-inner {
+    height: 100%;
+  }
+  #index-page .carousel-section section.carousel .carousel-inner .item {
+    height: 100%;
+  }
+}
 .sticky-right-item {
   position: fixed;
   right: 0;
@@ -69,13 +93,9 @@
   font-size: 27px;
   font-weight: 600;
   padding: 8px;
+  border-radius: 3px;
 }
 @media (max-width: 767px) {
-  .carousel-caption {
-    margin-top: -35px;
-    top: 50%;
-    padding: 0px;
-  }
   .carousel-caption h2 {
     margin: 0px;
     font-size: 38px;
@@ -286,6 +306,7 @@
   height: 60px;
   transition: height 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
   overflow: hidden;
+  text-align: center;
 }
 .nav-mobile.active {
   height: 340px;
@@ -294,10 +315,8 @@
   z-index: 999;
   border-bottom: 1px solid #f08423;
 }
-.nav-mobile .logo {
-  float: left;
-}
 .nav-mobile .logo img {
+  margin: 5px 0px 0px 45px;
   height: 48px;
 }
 .nav-mobile .hamburger {
@@ -490,7 +509,11 @@
 #recent-works .Tab:hover > a {
   color: #222;
 }
+.academic {
+  margin-bottom: 50px;
+}
 .academic .row:nth-child(1) {
+  margin-bottom: 20px;
   min-height: 430px;
 }
 @media (max-width: 1199px) {
@@ -509,20 +532,28 @@
   position: absolute;
   left: 0;
   z-index: 1;
-  top: 55px;
+  top: 25px;
+}
+@media (max-width: 1199px) {
+  .academic .left {
+    z-index: 0;
+  }
 }
 .academic .right {
   overflow: hidden;
   position: absolute;
   right: 0;
-  width: 68%;
+  width: 56%;
   background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
-  padding: 50px 20px 50px 70px;
+  padding: 0 20px;
 }
 @media (max-width: 1199px) {
   .academic .right {
-    width: 58%;
+    width: 60%;
   }
+}
+.academic .mobile {
+  margin-bottom: 40px;
 }
 .tutorial .row:nth-child(1) {
   min-height: 430px;
@@ -536,24 +567,31 @@
   position: absolute;
   left: 0;
   z-index: 1;
-  top: 55px;
+  top: 35px;
+}
+@media (max-width: 1199px) {
+  .tutorial .left {
+    z-index: 0;
+  }
 }
 .tutorial .right {
   overflow: hidden;
   position: absolute;
   right: 0;
-  width: 68%;
+  width: 56%;
   background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
-  padding: 50px 20px 50px 70px;
+  padding: 20px;
 }
 @media (max-width: 1199px) {
   .tutorial .right {
-    width: 58%;
+    width: 60%;
   }
 }
-.academic .container:nth-child(1),
-.tutorial .container:nth-child(1) {
-  width: 100%;
+@media (max-width: 1199px) {
+  .academic .container:nth-child(1),
+  .tutorial .container:nth-child(1) {
+    width: 100%;
+  }
 }
 .academic .background-text h2,
 .tutorial .background-text h2 {
@@ -582,6 +620,12 @@
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
 }
+@media (max-width: 991px) {
+  .academic h3,
+  .tutorial h3 {
+    font-weight: bold;
+  }
+}
 .academic .mobile,
 .tutorial .mobile {
   background-color: #f08423;
@@ -593,6 +637,16 @@
 .academic .mobile .content,
 .tutorial .mobile .content {
   padding: 15px;
+}
+@media (max-width: 991px) {
+  .academic .btm-line,
+  .tutorial .btm-line {
+    display: none;
+  }
+  .academic .lead,
+  .tutorial .lead {
+    display: none;
+  }
 }
 .happening .featured {
   margin-top: 30px;
