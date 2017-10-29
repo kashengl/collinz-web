@@ -519,6 +519,10 @@ body {
 .academic {
   margin-bottom: 50px;
 }
+.academic .orange-bg-02,
+.academic .green-bg-02 {
+  min-height: 550px;
+}
 .academic .row:nth-child(1) {
   margin-bottom: 20px;
   min-height: 430px;
