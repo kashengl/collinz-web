@@ -78,29 +78,16 @@
         </div>
     </div>
 
-    <div class="sticky-right-item hidden-xs">
-        <div>
-            <img src="images/fulltimeacademic.jpg">
-            <div class="close">
-            </div>
-        </div>
-        <div class="content">
-            <h3>Full Time Learning Programme</h3>
-            <h2>2018 Open For Registration</h2>
-            <a href="#">
-                <button class="btn-more-info">
-                    MORE INFO
-                </button>
+    <div class="new-top-bar col-sm-12 hidden-xs hidden-sm">
+        
+        <div class="col-xs-4">
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo">
             </a>
         </div>
-    </div>
-
-    <div class="new-top-bar col-sm-12">
-        <div>
-            <img src="images/logo.png" alt="logo">
-        </div>
-        <div class="fulltime">
-            <span class="default">
+        
+        <div class="fulltime col-xs-4">
+            <span class="default col-xs-12">
                 <h1>
                     FULL TIME
                 </h1>
@@ -108,7 +95,7 @@
                     PROGRAMME
                 </h2>
             </span>
-            <span class="hoverActive">
+            <span class="hoverActive col-xs-12">
                 <a href="collinz-international.html" title="">
                     <img class="col-xs-6" src="images/partners/partner2.png"/>
                 </a>
@@ -117,8 +104,8 @@
                 </a>
             </span>
         </div>
-        <div class="tutorial">
-            <span class="default">
+        <div class="tutorial col-xs-4">
+            <span class="default col-xs-12">
                 <h1>
                     TUTORIAL
                 </h1>
@@ -126,17 +113,33 @@
                     PROGRAMME
                 </h2>
             </span>
-            <span class="hoverActive">
-                <a href="centres.html" ><span>SUBANG</span></a>
-                <a href="centres-klang.html" ><span>KLANG</span></a>
-                <a href="centres-mont-kiara.html" ><span>MONT KIARA</span></a>
-                <a href="centres-damansara-utama.html" ><span>UPTOWN</span></a>
+            <span class="hoverActive col-xs-12">
+                <a href="centres.html" >
+                    <span>
+                        SUBANG
+                    </span>
+                </a>
+                <a href="centres-klang.html" >
+                    <span>
+                        KLANG
+                    </span>
+                </a>
+                <a href="centres-mont-kiara.html" >
+                    <span>
+                        MONT KIARA
+                    </span>
+                </a>
+                <a href="centres-damansara-utama.html" >
+                    <span>
+                        UPTOWN
+                    </span>
+                </a>
             </span>
         </div>
     </div>
 
     <!-- //sticky -->
-    <div class="col-xs-12 paddingZero nav sticky nav-sticky hidden-xs">
+    <div class="col-xs-12 paddingZero nav sticky nav-sticky hidden-xs hidden-md">
         <div class="container">
             <div class="desktop">
                 <ul>
@@ -158,7 +161,8 @@
         </div>
     </div>
 
-    <div class="col-xs-12 paddingZero nav nav-desktop hidden-xs">
+    <!-- normal -->
+    <div class="col-xs-12 paddingZero nav nav-desktop hidden-xs hidden-sm">
         <div class="container">
             <div class="desktop">
                 <ul>
@@ -168,8 +172,14 @@
                     <li><a href="centres.html">Centres</a><span class="display-none-767">|</span></li>
                     
                     <li><a href="admission.html">Admission</a><span class="display-none-767">|</span></li>
-                    
-                    <li><a href="news-events-annual-awards-2017.html">News & Events</a><span class="display-none-767">|</span></li>
+
+                     <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown-menu"> News & Events</a><span class="display-none-767">|</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="happening.html">Happenings</a></li>
+                            <li><a href="academic-calendar.html">Academic Calender</a></li>
+                        </ul>
+                    </li>
                     
                     <li><a href="introduction.html">Contact Us</a><span class="display-none-767">|</span></li>
                     
@@ -180,7 +190,8 @@
         <img class="nav-book" src="images/nav-bar-book.png">    
     </div>
 
-    <div class="col-xs-12 paddingZero nav-mobile hidden-sm hidden-md hidden-lg">
+    <!-- mobile -->
+    <div class="col-xs-12 paddingZero nav-mobile hidden-md hidden-lg">
         <div class="container">
             <a class="logo" href="index.html"><img src="images/logo.png"/></a>
              <button type="button" class="hamburger" data-toggle="collapse" data-target=".navbar-collapse">
@@ -191,19 +202,40 @@
         </div>
 
         <div class="mobile-menu">
-            
-            <a href="introduction.html"><div>About Us</div></a>
-            
-            <a href="centres.html"><div>Centres</div></a>
-            
-            <a href="admission.html"><div>Admission</div></a>
-            
-            <a href="news-events-annual-awards-2017.html"><div>News & Events</div></a>
-            
-            <a href="introduction.html"><div>Contact Us</div></a>
-            
-            <a href="career.html"><div>Career</div></a>             
-            
+            <ul>
+                <li>
+                    <a href="introduction.html">
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="centres.html">
+                        Centres
+                    </a>
+                </li>
+                <li>
+                    <a href="admission.html">
+                        Admission
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="mobile-dropdown-toggle" data-toggle="mobile-dropdown-menu" href="#"> News & Events</a>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="happening.html">Happenings</a></li>
+                        <li><a href="academic-calendar.html">Academic Calender</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="introduction.html">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a href="career.html">
+                        Career
+                    </a> 
+                </li>
+            </ul>
         </div>
         
     </div>
@@ -215,7 +247,7 @@
       <section id="intro" data-speed="0" data-type="background" style="background: url(images/news-events/header-bg.jpg);">
         <div class="container">
               <div class="col-lg-12">
-              <h1>News & Events</h1>
+              <h1>Happenings</h1>
               <h2>Happenings at Collinz Education Group</h2>
               </div>
            </div>

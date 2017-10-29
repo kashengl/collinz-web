@@ -40,6 +40,12 @@
     
     
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,600' rel='stylesheet' type='text/css'>
+     <!-- 
+    @author:sern
+    overidding previous css
+     -->
+    <link href="css/new-main.css" rel="stylesheet"> 
+    
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -72,63 +78,171 @@
         </div>
     </div>
 
-    <header id="header">
-        <div class="top-bar">
-            <div class="row">
-                <div class="container">
-                    <a href="index.html"><img class="center-block img-responsive top-logo" src="images/logo.png" alt="logo"></a>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
+    <div class="new-top-bar col-sm-12 hidden-xs hidden-sm">
+        
+        <div class="col-xs-4">
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo">
+            </a>
+        </div>
+        
+        <div class="fulltime col-xs-4">
+            <span class="default col-xs-12">
+                <h1>
+                    FULL TIME
+                </h1>
+                <h2>
+                    PROGRAMME
+                </h2>
+            </span>
+            <span class="hoverActive col-xs-12">
+                <a href="collinz-international.html" title="">
+                    <img class="col-xs-6" src="images/partners/partner2.png"/>
+                </a>
+                <a href="sri-botanic.html">
+                    <img class="col-xs-6" src="images/partners/partner1.png"/>
+                </a>
+            </span>
+        </div>
+        <div class="tutorial col-xs-4">
+            <span class="default col-xs-12">
+                <h1>
+                    TUTORIAL
+                </h1>
+                <h2>
+                    PROGRAMME
+                </h2>
+            </span>
+            <span class="hoverActive col-xs-12">
+                <a href="centres.html" >
+                    <span>
+                        SUBANG
+                    </span>
+                </a>
+                <a href="centres-klang.html" >
+                    <span>
+                        KLANG
+                    </span>
+                </a>
+                <a href="centres-mont-kiara.html" >
+                    <span>
+                        MONT KIARA
+                    </span>
+                </a>
+                <a href="centres-damansara-utama.html" >
+                    <span>
+                        UPTOWN
+                    </span>
+                </a>
+            </span>
+        </div>
+    </div>
 
-        <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div class="navbar-header" >
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!--<a class="navbar-brand" href="index.html"><img class="img-responsive" src="images/logo.png" alt="logo"></a>-->
-                </div>
-				
-                <div class="collapse navbar-collapse" >
-                    <ul class="nav navbar-nav">
-                    	  <li><a href="index.html" class="fix-logo"><img class="img-responsive" src="images/logo.png"/></a></li> <li><a href="introduction.html">About Us</a></li>
-                        <li class="display-none-767">|</li>
-                        <li><a href="admission.html">Admission</a></li>
-                        <li class="display-none-767">|</li>
-                        <li class="dropdown">
-                        		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Academic</a>
-                             <ul class="dropdown-menu">
-                                <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Full Time</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="sri-botanic.html">Sri Botanic</a></li>
-                                        <li><a href="collinz-international.html">Collinz International</a></li>
-										</ul>
-									</li>
-            
-                                        
-                                <li><a href="tutorial.html">Tutorial</a></li>
-                            </ul>
-                        </li>
-                        <li class="display-none-767">|</li>
-                        <li><a href="centres.html">Centres</a></li>
-                        <li class="display-none-767">|</li>
-                        <li><a href="news-events-annual-awards-2017.html">News & Events</a></li>
-                        <li class="display-none-767">|</li>
-                        <li><a href="career.html">Career</a></li>                  
+    <!-- //sticky -->
+    <div class="col-xs-12 paddingZero nav sticky nav-sticky hidden-xs hidden-md">
+        <div class="container">
+            <div class="desktop">
+                <ul>
+                    <li><a href="index.html"><img src="images/logo.png"/></a></li>
+
+                    <li><a href="introduction.html">About Us</a><span class="display-none-767">|</span></li>
+                    
+                    <li><a href="centres.html">Centres</a><span class="display-none-767">|</span></li>
+                    
+                    <li><a href="admission.html">Admission</a><span class="display-none-767">|</span></li>
+                    
+                    <li><a href="news-events-annual-awards-2017.html">News & Events</a><span class="display-none-767">|</span></li>
+                    
+                    <li><a href="introduction.html">Contact Us</a><span class="display-none-767">|</span></li>
+                    
+                    <li><a href="career.html">Career</a></li>                  
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- normal -->
+    <div class="col-xs-12 paddingZero nav nav-desktop hidden-xs hidden-sm">
+        <div class="container">
+            <div class="desktop">
+                <ul>
+                    <!-- <li><a href="index.html" class="fix-logo"><img class="img-responsive" src="images/logo.png"/></a></li> -->
+                    <li><a href="introduction.html">About Us</a><span class="display-none-767">|</span></li>
+                    
+                    <li><a href="centres.html">Centres</a><span class="display-none-767">|</span></li>
+                    
+                    <li><a href="admission.html">Admission</a><span class="display-none-767">|</span></li>
+
+                     <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown-menu"> News & Events</a><span class="display-none-767">|</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="happening.html">Happenings</a></li>
+                            <li><a href="academic-calendar.html">Academic Calender</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="introduction.html">Contact Us</a><span class="display-none-767">|</span></li>
+                    
+                    <li><a href="career.html">Career</a></li>                  
+                </ul>
+            </div>
+        </div>
+        <img class="nav-book" src="images/nav-bar-book.png">    
+    </div>
+
+    <!-- mobile -->
+    <div class="col-xs-12 paddingZero nav-mobile hidden-md hidden-lg">
+        <div class="container">
+            <a class="logo" href="index.html"><img src="images/logo.png"/></a>
+             <button type="button" class="hamburger" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu">
+            <ul>
+                <li>
+                    <a href="introduction.html">
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="centres.html">
+                        Centres
+                    </a>
+                </li>
+                <li>
+                    <a href="admission.html">
+                        Admission
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="mobile-dropdown-toggle" data-toggle="mobile-dropdown-menu" href="#"> News & Events</a>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="happening.html">Happenings</a></li>
+                        <li><a href="academic-calendar.html">Academic Calender</a></li>
                     </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-		
-    </header><!--/header-->
+                </li>
+                <li>
+                    <a href="introduction.html">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a href="career.html">
+                        Career
+                    </a> 
+                </li>
+            </ul>
+        </div>
+        
+    </div>
 
 
 	
-    
+    <div class="col-xs-12 paddingZero">
     <!-- Header -->
     <section id="intro" data-speed="0" data-type="background" style="background: url(images/news-events/header-bg.jpg);">
 		<div class="container">
@@ -372,7 +486,7 @@ Bandar Botanic, <br>
         </div>
     </footer><!--/#footer-->
     
-   
+   </div>
    
    <div class="modal" id="modal-gallery" role="dialog">
   <div class="modal-dialog">
