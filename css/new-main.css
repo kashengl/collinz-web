@@ -791,6 +791,9 @@ body {
   font-size: 20px;
   font-weight: 600;
 }
+.happeningEvent #myCarousel {
+  margin: 30px 0;
+}
 .academicCalendar #calendar {
   margin-top: 30px;
 }
