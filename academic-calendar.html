@@ -37,6 +37,12 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
+
+    <link href="css/fullcalendar.min.css" rel="stylesheet">
+    <!-- <link href="css/fullcalendar.print.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.2/fullcalendar.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.2/fullcalendar.print.css" rel="stylesheet"> -->
+
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <!-- 
@@ -70,7 +76,7 @@
     <link rel="icon" href="images/favicon/favicon.ico" />
 </head><!--/head-->
 
-<body class="preload">
+<body class="preload academicCalendar">
   
     <div id="loading">
         <div id="loading-center">
@@ -78,7 +84,7 @@
         </div>
     </div>
     
-    <div class="sticky-right-item hidden-xs">
+   <!--  <div class="sticky-right-item hidden-xs">
         <div>
             <img src="images/fulltimeacademic.jpg">
             <div class="close">
@@ -94,7 +100,7 @@
             </a>
         </div>
     </div>
-
+ -->
     <div class="new-top-bar col-sm-12">
         <div>
             <img src="images/logo.png" alt="logo">
@@ -215,22 +221,28 @@
         </div>
     </div>
 
-    <div class="col-xs-12">
-      <div class="col-xs-6">
+    <div class="col-xs-12 calendarWrapper">
+        <div class="container">
+            <div class="col-xs-12 col-md-6" id="calendar"></div>
+            <div class="col-xs-12 col-md-6" id="eventlist"></div>
+        </div>
+      <!-- <div class="col-xs-6">
         <iframe src="https://calendar.google.com/calendar/embed?src=628cemcs90tcn7l3lo9tlnnaeo%40group.calendar.google.com&ctz=Asia/Kuala_Lumpur" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>  
       </div>
       <div class="col-xs-6">
         <ul class="eventlist">
           
         </ul>
-      </div>
+      </div> -->
+      
     </div>
     
 
     <script src="js/jquery.js"></script>
   <!-- <script src="js/bootstrap.min.js"></script>   -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+
+    <script type="text/javascript" src="js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
     <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
@@ -242,6 +254,12 @@
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.paroller.min.js"></script>
+
+    <!-- calendar -->
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="js/gcal.min.js"></script>
+
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -260,22 +278,47 @@
       
   </script>
   <script type="text/javascript">
-    $.get( "https://www.googleapis.com/calendar/v3/calendars/628cemcs90tcn7l3lo9tlnnaeo%40group.calendar.google.com/events?key=AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI", function( data ) {
-      var events = data.items;
-      for(i = 0; i < events.length; i++) { 
-        var oneEvent = events[i];
-        var startDate = oneEvent.start.date;
-        var summary = oneEvent.summary;
-        // console.log(oneEvent.start.date);
-        // console.log(oneEvent.summary);
-        $('.eventlist').append(
-          '<li>'+
-          startDate + " : " + summary +
-          '</li>' 
-        );
-      }
-    });
+    // $.get( "https://www.googleapis.com/calendar/v3/calendars/628cemcs90tcn7l3lo9tlnnaeo%40group.calendar.google.com/events?key=AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI", function( data ) {
+    //   var events = data.items;
+    //   for(i = 0; i < events.length; i++) { 
+    //     var oneEvent = events[i];
+    //     var startDate = oneEvent.start.date;
+    //     var summary = oneEvent.summary;
+    //     // console.log(oneEvent.start.date);
+    //     // console.log(oneEvent.summary);
+    //     $('.eventlist').append(
+    //       '<li>'+
+    //       startDate + " : " + summary +
+    //       '</li>' 
+    //     );
+    //   }
+    // });
     // https://www.googleapis.com/calendar/v3/calendars/628cemcs90tcn7l3lo9tlnnaeo%40group.calendar.google.com/events?key=AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI
+
+    $(document).ready(function() {
+        $('#calendar').fullCalendar({
+            googleCalendarApiKey: 'AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI',
+            events: {
+                googleCalendarId: '628cemcs90tcn7l3lo9tlnnaeo@group.calendar.google.com',
+            },
+            eventColor: '#f08423'
+        });
+
+
+        $('#eventlist').fullCalendar({
+            googleCalendarApiKey: 'AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI',
+            events: {
+                googleCalendarId: '628cemcs90tcn7l3lo9tlnnaeo@group.calendar.google.com',
+            },
+            views: {
+                listMonth: {
+                  buttonText: ''
+                }
+            },
+            defaultView: 'listMonth',
+            eventColor: '#f08423'
+        });
+    });
   </script>
     
 </body>
