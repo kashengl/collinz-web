@@ -72,11 +72,11 @@
 
 <body class="preload" id="index-page">
 	
-    <div id="loading">
+<!--     <div id="loading">
         <div id="loading-center">
         	<img class="center-block" src="images/loading.gif"/>
         </div>
-    </div>
+    </div> -->
     
     <div class="sticky-right-item hidden-xs">
         <div>
@@ -728,7 +728,6 @@ Bandar Botanic 41200, Klang.
 	<script src="js/jquery.js"></script>
 	<!-- <script src="js/bootstrap.min.js"></script>	 -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
   	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
   	<script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
@@ -755,16 +754,21 @@ Bandar Botanic 41200, Klang.
             //parallax
             $(window).paroller();
             //carousel swiping
-            $(".carousel-section").swipe({
 
-              swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-                if (direction == 'left') $(this).carousel('next');
-                if (direction == 'right') $(this).carousel('prev');
-
-              },
-              allowPageScroll:"vertical"
-
+            $(".carousel").on("touchstart", function(event){
+                    var xClick = event.originalEvent.touches[0].pageX;
+                $(this).one("touchmove", function(event){
+                    var xMove = event.originalEvent.touches[0].pageX;
+                    if( Math.floor(xClick - xMove) > 5 ){
+                        $(this).carousel('next');
+                    }
+                    else if( Math.floor(xClick - xMove) < -5 ){
+                        $(this).carousel('prev');
+                    }
+                });
+                $(".carousel").on("touchend", function(){
+                        $(this).off("touchmove");
+                });
             });
         });
       
