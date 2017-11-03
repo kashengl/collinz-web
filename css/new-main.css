@@ -287,6 +287,9 @@ body {
   top: -250px;
   opacity: 0;
 }
+.nav.sticky ul li {
+  cursor: pointer;
+}
 .nav.sticky ul li:nth-child(1) a {
   padding: 0px;
 }
@@ -300,6 +303,9 @@ body {
   .nav.sticky ul li a {
     padding: 12px 25px;
   }
+}
+.nav.sticky .dropdown-menu a {
+  padding: 12px 36px !important;
 }
 .nav-book {
   position: absolute;
