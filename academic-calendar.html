@@ -268,7 +268,7 @@
       </section>
     </div>
     
-    <div class="col-xs-12 calendarWrapper">
+    <div class="col-xs-12 calendarWrapper" style="padding-bottom:30px;">
         <div class="container">
             <div class="col-xs-12 col-md-6" id="calendar"></div>
             <div class="col-xs-12 col-md-6" id="eventlist"></div>
@@ -354,18 +354,23 @@
 
     $(document).ready(function() {
         $('#calendar').fullCalendar({
-            googleCalendarApiKey: 'AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI',
+            // googleCalendarApiKey: 'AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI',
+            googleCalendarApiKey: 'AIzaSyAz3D2_kQFiGjA5jIOk4iKB4zUaexWG04Y',
+            
             events: {
-                googleCalendarId: '628cemcs90tcn7l3lo9tlnnaeo@group.calendar.google.com',
+                // googleCalendarId: '628cemcs90tcn7l3lo9tlnnaeo@group.calendar.google.com',
+                googleCalendarId: 'k94qtp6b953a7n1dc7h09uvjvg@group.calendar.google.com',
             },
             eventColor: '#f08423'
         });
 
 
         $('#eventlist').fullCalendar({
-            googleCalendarApiKey: 'AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI',
+            // googleCalendarApiKey: 'AIzaSyD8iP0qTiysfE0NdDXhD8D0S3EAWs-RTQI',
+            googleCalendarApiKey: 'AIzaSyAz3D2_kQFiGjA5jIOk4iKB4zUaexWG04Y',
             events: {
-                googleCalendarId: '628cemcs90tcn7l3lo9tlnnaeo@group.calendar.google.com',
+                // googleCalendarId: '628cemcs90tcn7l3lo9tlnnaeo@group.calendar.google.com',
+                googleCalendarId: 'k94qtp6b953a7n1dc7h09uvjvg@group.calendar.google.com',
             },
             views: {
                 listMonth: {

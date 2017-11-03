@@ -153,7 +153,13 @@ body {
   display: none;
 }
 .new-top-bar div:nth-child(2):hover .hoverActive {
-  display: block;
+  display: flex;
+  justify-content: space-around;
+}
+.new-top-bar div:nth-child(2):hover .hoverActive img {
+  width: auto;
+  max-height: 100px;
+  float: left;
 }
 .new-top-bar div:nth-child(3) {
   background-color: #425fac;

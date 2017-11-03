@@ -199,7 +199,7 @@ html, body{
           filter: grayscale(100%);
           &:hover
           {
-             -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+            -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
             filter: grayscale(0%);
           }
         }
@@ -222,7 +222,15 @@ html, body{
         
         .hoverActive
         {
-          display: block;
+          // display: block;
+          display: flex;
+          justify-content: space-around;
+
+          img{
+            width: auto;
+            max-height: 100px;
+            float: left;
+          }
         }
       }
     }
