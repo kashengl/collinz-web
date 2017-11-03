@@ -712,6 +712,12 @@ html, body{
 
   .orange-bg-02, .green-bg-02{
     min-height: 550px;
+    @media (max-width: @screen-sm-max) {
+      min-height: auto;
+    }
+    @media (max-width: @screen-xs-max) {
+      min-height: auto;
+    }
   }
   
   .row
@@ -826,6 +832,14 @@ html, body{
   p{
     color:white;
     .apply-font-sourcesans-regular(18px);
+
+    @media (max-width: @screen-sm-max) {
+      display: none;
+    }
+
+    @media (max-width: @screen-xs-max) {
+      display: none;
+    }
   }
   h2{
     color:white;
@@ -867,7 +881,7 @@ html, body{
       display: none;
     }
     .lead{
-      display: none;
+      // display: none;
     }
   }
 }

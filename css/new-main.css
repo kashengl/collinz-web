@@ -571,6 +571,18 @@ body {
 .academic .green-bg-02 {
   min-height: 550px;
 }
+@media (max-width: 991px) {
+  .academic .orange-bg-02,
+  .academic .green-bg-02 {
+    min-height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .academic .orange-bg-02,
+  .academic .green-bg-02 {
+    min-height: auto;
+  }
+}
 .academic .row:nth-child(1) {
   margin-bottom: 20px;
   min-height: 430px;
@@ -666,6 +678,18 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
 }
+@media (max-width: 991px) {
+  .academic p,
+  .tutorial p {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .academic p,
+  .tutorial p {
+    display: none;
+  }
+}
 .academic h2,
 .tutorial h2 {
   color: white;
@@ -713,10 +737,6 @@ body {
 @media (max-width: 991px) {
   .academic .btm-line,
   .tutorial .btm-line {
-    display: none;
-  }
-  .academic .lead,
-  .tutorial .lead {
     display: none;
   }
 }
