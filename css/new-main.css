@@ -589,7 +589,7 @@ body {
 }
 @media (max-width: 1199px) {
   .academic .row:nth-child(1) {
-    min-height: 480px;
+    min-height: auto;
   }
 }
 .academic .row:nth-child(2) {
