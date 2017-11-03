@@ -159,6 +159,7 @@ body {
 .new-top-bar div:nth-child(2):hover .hoverActive img {
   width: auto;
   max-height: 100px;
+  max-width: 100%;
   float: left;
 }
 .new-top-bar div:nth-child(3) {
