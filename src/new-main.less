@@ -8,6 +8,7 @@
 @theme-orange :#f08423;
 @theme-blue   :#425fac;
 @theme-black : #191919;
+@theme-grey: #4e4e4e;
 @theme-hover-blue: #263e91;
 @theme-light-grey: #F8F9F9;
 //Color Variables Declaration End----------
@@ -48,9 +49,14 @@ html, body{
 //
 #intro{
   @media (max-width: @screen-xs-max) {
+    margin-top: 60px;//offset navbar
     h2{
       font-size: 15px;
     }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    margin-top: 60px;//offset navbar
   }
 }
 
@@ -420,6 +426,9 @@ html, body{
 
 .nav-mobile
 {
+  position: fixed;
+  z-index: 999;
+  overflow: hidden;
   background-color: @theme-light-grey;
   // height: 60px;
   transition : height 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
@@ -507,6 +516,7 @@ html, body{
   }
 
   &.active{
+    overflow: scroll;
     .mobile-menu{
       transition: height 0.35s ease-in;
       -webkit-transition: height 0.35s ease-in;
@@ -768,7 +778,13 @@ html, body{
   }
 
   .mobile{
-    margin-bottom: 40px;
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+    @media (max-width: @screen-sm-max) and (max-width: @screen-xs-max) {
+      h2, h3, p{
+        color:@theme-grey;
+      }
+    }
   }
 }
 
@@ -1042,6 +1058,18 @@ html, body{
   #myCarousel{
     margin: 30px 0;
   }
+
+  @media (max-width: @screen-sm-max){
+    section.carousel .item, section.carousel .item.active, section.carousel .carousel-inner{
+      height: 500px;
+    }
+  }
+
+  @media (max-width: @screen-xs-max){
+    section.carousel .item, section.carousel .item.active, section.carousel .carousel-inner{
+      height: 200px;
+    }
+  }
 }
 //academic calendar
 .academicCalendar{
@@ -1050,6 +1078,64 @@ html, body{
   }
   #eventlist{
     margin-top: 30px;
+  }
+}
+
+//centre/our branches
+.ourBranches
+{
+  #intro{
+    @media (max-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+      .container{
+        height: 100%;
+        background-color: rgba(0,0,0,0.25);
+      }
+    }
+  }
+
+  .logoWrapper{
+    display: flex;
+    padding-bottom: 30px;
+    span{
+      display: inline-flex;
+      align-items: center;
+    }
+    img{
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  .touch-slider{
+    @media (max-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+      .item {
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+//career
+.career
+{
+  h2{
+    &.text-center{
+      padding-bottom: 30px;
+      @media (max-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+//collinz-international
+.collinzInt{
+  @media (max-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+    #intro h1{
+      font-size:29px;
+    }
   }
 }
 //end of sern

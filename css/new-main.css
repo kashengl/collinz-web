@@ -9,8 +9,16 @@ body {
   height: 100%;
 }
 @media (max-width: 767px) {
+  #intro {
+    margin-top: 60px;
+  }
   #intro h2 {
     font-size: 15px;
+  }
+}
+@media (max-width: 991px) {
+  #intro {
+    margin-top: 60px;
   }
 }
 @media (max-width: 767px) {
@@ -320,6 +328,9 @@ body {
   pointer-events: none;
 }
 .nav-mobile {
+  position: fixed;
+  z-index: 999;
+  overflow: hidden;
   background-color: #F8F9F9;
   transition: height 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
   text-align: center;
@@ -382,6 +393,9 @@ body {
 .nav-mobile .mobile-menu .mobile-dropdown-menu {
   display: none;
   background-color: #263e91;
+}
+.nav-mobile.active {
+  overflow: scroll;
 }
 .nav-mobile.active .mobile-menu {
   transition: height 0.35s ease-in;
@@ -630,7 +644,15 @@ body {
   }
 }
 .academic .mobile {
-  margin-bottom: 40px;
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
+  background-blend-mode: screen;
+}
+@media (max-width: 991px) and (max-width: 767px) {
+  .academic .mobile h2,
+  .academic .mobile h3,
+  .academic .mobile p {
+    color: #4e4e4e;
+  }
 }
 .tutorial .row:nth-child(1) {
   min-height: 430px;
@@ -909,9 +931,59 @@ body {
 .happeningEvent #myCarousel {
   margin: 30px 0;
 }
+@media (max-width: 991px) {
+  .happeningEvent section.carousel .item,
+  .happeningEvent section.carousel .item.active,
+  .happeningEvent section.carousel .carousel-inner {
+    height: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .happeningEvent section.carousel .item,
+  .happeningEvent section.carousel .item.active,
+  .happeningEvent section.carousel .carousel-inner {
+    height: 200px;
+  }
+}
 .academicCalendar #calendar {
   margin-top: 30px;
 }
 .academicCalendar #eventlist {
   margin-top: 30px;
+}
+@media (max-width: 767px) and (max-width: 991px) {
+  .ourBranches #intro .container {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+}
+.ourBranches .logoWrapper {
+  display: flex;
+  padding-bottom: 30px;
+}
+.ourBranches .logoWrapper span {
+  display: inline-flex;
+  align-items: center;
+}
+.ourBranches .logoWrapper img {
+  width: 50%;
+  height: 100%;
+}
+@media (max-width: 767px) and (max-width: 991px) {
+  .ourBranches .touch-slider .item img {
+    width: 100%;
+  }
+}
+.career h2.text-center {
+  padding-bottom: 30px;
+}
+@media (max-width: 767px) and (max-width: 991px) {
+  .career h2.text-center {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) and (max-width: 991px) {
+  .collinzInt #intro h1 {
+    font-size: 29px;
+  }
 }
