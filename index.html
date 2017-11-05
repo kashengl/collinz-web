@@ -113,10 +113,10 @@
                 </h2>
             </span>
             <span class="hoverActive col-xs-12">
-                <a href="collinz-international.html" title="">
+                <a href="sri-botanic.html">
                     <img class="col-xs-6" src="images/partners/partner2.png"/>
                 </a>
-                <a href="sri-botanic.html">
+                <a href="collinz-international.html">
                     <img class="col-xs-6" src="images/partners/partner1.png"/>
                 </a>
             </span>
@@ -762,6 +762,10 @@ Bandar Botanic 41200, Klang.
             //parallax
             $(window).paroller();
             //carousel swiping
+
+            $('.carousel').carousel({
+                interval: 3000
+            });
 
             $(".carousel").on("touchstart", function(event){
                     var xClick = event.originalEvent.touches[0].pageX;
