@@ -1,3 +1,8 @@
+.white-bg-sticky {
+  height: 100%;
+  position: absolute;
+  background-color: white;
+}
 .paddingZero {
   padding: 0px !important;
 }
@@ -307,6 +312,9 @@ body {
 }
 .nav.sticky ul li:nth-child(1) a img {
   width: 150px;
+}
+.nav.sticky ul li:nth-child(1) a:hover {
+  background-color: transparent;
 }
 .nav.sticky ul li a {
   padding: 12px 40px;

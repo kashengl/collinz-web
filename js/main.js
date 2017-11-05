@@ -705,7 +705,20 @@ $(document).ready(function(){
 			isDropdownToggled=false;
 		}
 	});
+
+	var leftOffset = $('.special-indicator').offset().left
+	var indicatorWidth = $('.special-indicator').width()
+
+	$('.white-bg-sticky').width(leftOffset+indicatorWidth);
+
 });
+
+$(window).on('resize',function(){
+	var leftOffset = $('.special-indicator').offset().left
+	var indicatorWidth = $('.special-indicator').width()
+
+	$('.white-bg-sticky').width(leftOffset+indicatorWidth);
+})
 
 
 
