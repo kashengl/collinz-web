@@ -52,6 +52,10 @@
 html, body{
   height: 100%;
 }
+
+#loading{
+  z-index: 9999;
+}
 //
 #intro{
   @media (max-width: @screen-xs-max) {
@@ -1082,6 +1086,21 @@ html, body{
     }
   }
 }
+
+.centre{
+  @media (max-width: @screen-sm-max){
+    section.carousel .item, section.carousel .item.active, section.carousel .carousel-inner{
+      height: 500px;
+    }
+  }
+
+  @media (max-width: @screen-xs-max){
+    section.carousel .item, section.carousel .item.active, section.carousel .carousel-inner{
+      height: 200px;
+    }
+  }
+}
+
 //academic calendar
 .academicCalendar{
   #calendar{
