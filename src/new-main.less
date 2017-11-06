@@ -8,6 +8,7 @@
 @theme-orange :#f08423;
 @theme-blue   :#425fac;
 @theme-black : #191919;
+@theme-grey: #4e4e4e;
 @theme-hover-blue: #263e91;
 @theme-light-grey: #F8F9F9;
 //Color Variables Declaration End----------
@@ -32,6 +33,12 @@
 //Font Method Declaration End-------------
 
 //global
+.white-bg-sticky{
+  height: 100%;
+  position: absolute;
+  background-color: white;
+}
+
 .paddingZero
 {
   padding: 0px !important;
@@ -45,12 +52,21 @@
 html, body{
   height: 100%;
 }
+
+#loading{
+  z-index: 9999;
+}
 //
 #intro{
   @media (max-width: @screen-xs-max) {
+    margin-top: 60px;//offset navbar
     h2{
       font-size: 15px;
     }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    margin-top: 60px;//offset navbar
   }
 }
 
@@ -70,8 +86,8 @@ html, body{
         height: 100%;
         .center-mobile
         {
-          background-position: right -700px center;
-          // background-position: right -315px center;
+          // background-position: right -700px center;
+          background-position: right -250px center;
         }
 
         .carousel-inner{
@@ -208,6 +224,8 @@ html, body{
 
       &:hover
       {
+        display: flex;
+        align-items: center;
         cursor: pointer;
         background-color: white;
         padding: 10px 18px;
@@ -245,7 +263,7 @@ html, body{
         display: none;
         span{
           color:grey;
-          .apply-font-sourcesans-bold(18px);
+          .apply-font-sourcesans-bold(16px);
 
           @media (max-width: @screen-md-max) {
             .apply-font-sourcesans-bold(14px);
@@ -258,11 +276,11 @@ html, body{
 
           &:nth-child(1),&:nth-child(2),&:nth-child(3)
           {
-            padding-right: 30px;
+            padding-right: 22px;
             
 
             @media (max-width: @screen-md-max) {
-              padding-right: 14px;
+              padding-right: 10px;
             }
           }
         }
@@ -352,6 +370,7 @@ html, body{
         vertical-align:middle;
       }
       a{
+        .apply-font-sourcesans-bold(14px);
         display: inline-block;
         -webkit-animation: fadeInUp 300ms linear 300ms both;
         -moz-animation: fadeInUp 300ms linear 300ms both;
@@ -387,6 +406,9 @@ html, body{
             {
               width: 150px;
             }
+            &:hover{
+              background-color: transparent;
+            }
           }
         }
         a{
@@ -419,6 +441,9 @@ html, body{
 
 .nav-mobile
 {
+  position: fixed;
+  z-index: 999;
+  overflow: hidden;
   background-color: @theme-light-grey;
   // height: 60px;
   transition : height 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
@@ -481,6 +506,7 @@ html, body{
       padding: 0;
       li{
         a{
+          .apply-font-sourcesans-bold(14px);
           -webkit-animation: fadeInUp 300ms linear 300ms both;
           -moz-animation: fadeInUp 300ms linear 300ms both;
           -o-animation: fadeInUp 300ms linear 300ms both;
@@ -505,6 +531,7 @@ html, body{
   }
 
   &.active{
+    overflow: scroll;
     .mobile-menu{
       transition: height 0.35s ease-in;
       -webkit-transition: height 0.35s ease-in;
@@ -758,7 +785,7 @@ html, body{
     width: 56%;
     background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
     // padding: 50px 20px 50px 70px;
-    padding: 0 20px;
+    padding: 0 35px;
 
     @media (max-width: @screen-md-max) {
       width: 60%;
@@ -766,7 +793,13 @@ html, body{
   }
 
   .mobile{
-    margin-bottom: 40px;
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+    @media (max-width: @screen-sm-max) and (max-width: @screen-xs-max) {
+      h2, h3, p{
+        color:@theme-grey;
+      }
+    }
   }
 }
 
@@ -800,7 +833,7 @@ html, body{
     width: 56%;
     background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
     // padding: 50px 20px 50px 70px;
-    padding: 20px;
+    padding: 35px;
     @media (max-width: @screen-md-max) {
       width: 60%;
     }
@@ -1040,7 +1073,34 @@ html, body{
   #myCarousel{
     margin: 30px 0;
   }
+
+  @media (max-width: @screen-sm-max){
+    section.carousel .item, section.carousel .item.active, section.carousel .carousel-inner{
+      height: 500px;
+    }
+  }
+
+  @media (max-width: @screen-xs-max){
+    section.carousel .item, section.carousel .item.active, section.carousel .carousel-inner{
+      height: 200px;
+    }
+  }
 }
+
+.centre{
+  @media (max-width: @screen-sm-max){
+    section.carousel .item, section.carousel .item.active, section.carousel .carousel-inner{
+      height: 500px;
+    }
+  }
+
+  @media (max-width: @screen-xs-max){
+    section.carousel .item, section.carousel .item.active, section.carousel .carousel-inner{
+      height: 200px;
+    }
+  }
+}
+
 //academic calendar
 .academicCalendar{
   #calendar{
@@ -1048,6 +1108,64 @@ html, body{
   }
   #eventlist{
     margin-top: 30px;
+  }
+}
+
+//centre/our branches
+.ourBranches
+{
+  #intro{
+    @media (max-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+      .container{
+        height: 100%;
+        background-color: rgba(0,0,0,0.25);
+      }
+    }
+  }
+
+  .logoWrapper{
+    display: flex;
+    padding-bottom: 30px;
+    span{
+      display: inline-flex;
+      align-items: center;
+    }
+    img{
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  .touch-slider{
+    @media (max-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+      .item {
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+//career
+.career
+{
+  h2{
+    &.text-center{
+      padding-bottom: 30px;
+      @media (max-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+//collinz-international
+.collinzInt{
+  @media (max-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+    #intro h1{
+      font-size:29px;
+    }
   }
 }
 //end of sern

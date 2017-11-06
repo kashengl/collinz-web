@@ -34,7 +34,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main.min.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/featherlight.min.css" title="Featherlight Styles" />
 	<link type="text/css" rel="stylesheet" href="css/featherlight.gallery.min.css" title="Featherlight Styles" />
@@ -45,7 +45,7 @@
     @author:sern
     overidding previous css
      -->
-    <link href="css/new-main.css" rel="stylesheet"> 
+    <link href="css/new-main.min.css" rel="stylesheet"> 
     
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -71,7 +71,7 @@
     <link rel="icon" href="images/favicon/favicon.ico" />
 </head><!--/head-->
 
-<body class="preload">
+<body class="preload happeningEvent">
 	
     <div id="loading">
         <div id="loading-center">
@@ -97,11 +97,11 @@
                 </h2>
             </span>
             <span class="hoverActive col-xs-12">
-                <a href="collinz-international.html" title="">
-                    <img class="col-xs-6" src="images/partners/partner2.png"/>
-                </a>
                 <a href="sri-botanic.html">
-                    <img class="col-xs-6" src="images/partners/partner1.png"/>
+                    <img class="col-xs-6" src="images/botanic-color.png"/>
+                </a>
+                <a href="collinz-international.html">
+                    <img class="col-xs-6" src="images/collinz-color.png"/>
                 </a>
             </span>
         </div>
@@ -141,10 +141,11 @@
 
     <!-- //sticky -->
     <div class="col-xs-12 paddingZero nav sticky nav-sticky hidden-xs hidden-sm">
+        <div class="white-bg-sticky"></div>
         <div class="container">
             <div class="desktop">
                 <ul>
-                    <li><a href="index.html"><img src="images/logo.png"/></a></li>
+                    <li class="special-indicator"><a href="index.html"><img src="images/logo.png"/></a></li>
 
                     <li><a href="introduction.html">About Us</a><span class="display-none-767">|</span></li>
                     
@@ -152,6 +153,7 @@
                     
                     <li><a href="admission.html">Admission</a><span class="display-none-767">|</span></li>
                     
+                   <!--  <li><a href="news-events-annual-awards-2017.html">News & Events</a><span class="display-none-767">|</span></li> -->
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown-menu"> News & Events</a><span class="display-none-767">|</span>
                         <ul class="dropdown-menu">
@@ -159,6 +161,7 @@
                             <li><a href="academic-calendar.html">Academic Calender</a></li>
                         </ul>
                     </li>
+                    
                     
                     <li><a href="introduction.html">Contact Us</a><span class="display-none-767">|</span></li>
                     
@@ -210,6 +213,24 @@
 
         <div class="mobile-menu">
             <ul>
+                <li class="dropdown">
+                    <a class="mobile-dropdown-toggle" data-toggle="m-menu-1" href="#">Full Time</a>
+                    <ul class="mobile-dropdown-menu m-menu-1">
+                        <li><a href="sri-botanic.html">Sri Botanic</a></li>
+                        <li><a href="collinz-international.html">Collinz International</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="mobile-dropdown-toggle" data-toggle="m-menu-2" href="#">Tutorial</a>
+                    <ul class="mobile-dropdown-menu m-menu-2">
+                        <li><a href="centres.html">Subang</a></li>
+                        <li><a href="centres-klang.html">Klang</a></li>
+                        <li><a href="centres-mont-kiara.html">Mont Kiara</a></li>
+                        <li><a href="centres-damansara-utama.html">Uptown</a></li>
+                    </ul>
+                </li>
+
                 <li>
                     <a href="introduction.html">
                         About Us
@@ -226,8 +247,8 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a class="mobile-dropdown-toggle" data-toggle="mobile-dropdown-menu" href="#"> News & Events</a>
-                    <ul class="mobile-dropdown-menu">
+                    <a class="mobile-dropdown-toggle" data-toggle="m-menu-3" href="#"> News & Events</a>
+                    <ul class="mobile-dropdown-menu m-menu-3">
                         <li><a href="happening.html">Happenings</a></li>
                         <li><a href="academic-calendar.html">Academic Calender</a></li>
                     </ul>
@@ -243,8 +264,7 @@
                     </a> 
                 </li>
             </ul>
-        </div>
-        
+        </div>   
     </div>
 
 
@@ -276,15 +296,7 @@
     
       <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
         <div class="row">
-        	<!-- <div class="col-md-5">
-            
-            <div class="row display-none-1200">
-            	<img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek9.jpg"/>
-                <img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek6.jpg"/>
-                <img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek1.jpg"/>
-                <img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek5.jpg"/>
-           <img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek8.jpg"/></div></div> -->
-            <section class="carousel slide col-xs-12" id="myCarousel" name="myCarousel">
+            <section class="carousel slide col-xs-12 hidden-md hidden-lg" id="myCarousel" name="myCarousel">
                 <!-- Indicators -->
                 <!-- <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -312,7 +324,16 @@
                 </a>
             </section>
 
-          <div class="col-xs-12">     
+            <div class="col-md-5 hidden-xs hidden-sm">
+            
+            <div class="row">
+                <img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek9.jpg"/>
+                <img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek6.jpg"/>
+                <img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek1.jpg"/>
+                <img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek5.jpg"/>
+           <img class="img-responsive" src="images/news-events/3-banknegara-skytrex-2017/skytrek8.jpg"/></div></div>
+
+          <div class="col-xs-12 col-md-7">     
             
             	<h2>Field Trip to Bank Negara Museum & Skytrek 2017</h2>
                <p>A fun-filled school trip to Bank Negara Museum and Skytrex on the 16th November. Students explores the history of Ringgit Malaysia as well as overcoming their fear and experience where you can fly, swing, glide and dangle on the various aerial obstacles at Skytrex Shah Alam.<br><br>
@@ -424,7 +445,7 @@
      </section>
     
     
-    <section class="updown-line gray-bg no-content">
+    <section class="updown-line gray-bg no-content col-xs-12">
     
     </section>
     
@@ -433,7 +454,7 @@
 
     
 
-    <section id="bottom">
+    <section id="bottom" class="col-xs-12">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
         	 
             <div class="row">
@@ -510,7 +531,7 @@ Bandar Botanic, <br>
         </div>
     </section><!--/#bottom-->
 
-    <footer id="footer" class="midnight-blue">
+    <footer id="footer" class="midnight-blue col-xs-12" >
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -560,7 +581,7 @@ Bandar Botanic, <br>
     
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
