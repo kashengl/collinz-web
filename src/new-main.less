@@ -56,6 +56,14 @@ html, body{
 #loading{
   z-index: 9999;
 }
+
+.back-to-top{
+  z-index: 999;
+}
+
+.fc-unthemed .fc-list-view{
+  border-color: transparent !important;
+}
 //
 #intro{
   @media (max-width: @screen-xs-max) {
@@ -105,7 +113,7 @@ html, body{
 {
   position: fixed;
   right: 0;
-  bottom : 100px;
+  bottom : 10px;
   z-index: 99;//always on top
   background-color: white;
   width: 300px;
@@ -807,6 +815,7 @@ html, body{
 {
   .row
   {
+    margin-bottom: 50px;
     &:nth-child(1)
     {
       min-height: 430px;
