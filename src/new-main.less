@@ -61,6 +61,15 @@ html, body{
   z-index: 999;
 }
 
+.padding-lr {
+  padding: 0 48px;
+
+  @media (max-width: @screen-sm-max) {
+    padding: 0 16px;
+  }
+
+}
+
 .fc-unthemed .fc-list-view{
   border-color: transparent !important;
 }
@@ -801,8 +810,9 @@ html, body{
   }
 
   .mobile{
-    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
-    background-blend-mode: screen;
+    // background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    // background-blend-mode: screen;
+    background-color: #fafafa !important;
     @media (max-width: @screen-sm-max) and (max-width: @screen-xs-max) {
       h2, h3, p{
         color:@theme-grey;
