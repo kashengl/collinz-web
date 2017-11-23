@@ -1140,8 +1140,12 @@ html, body{
       align-items: center;
     }
     img{
-      width: 50%;
+      width: 30%;
       height: 100%;
+
+      @media (max-width: @screen-xs-min){
+        width: 50%;
+      }
     }
   }
 
@@ -1174,6 +1178,12 @@ html, body{
   @media (max-width: @screen-xs-max) and (max-width: @screen-sm-max) {
     #intro h1{
       font-size:29px;
+    }
+  }
+
+  @media (max-width: @screen-xs-max){
+    section.carousel .item, section.carousel .item.active, section.carousel .carousel-inner{
+      height: 200px;
     }
   }
 }
