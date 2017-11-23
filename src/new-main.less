@@ -771,8 +771,14 @@ html, body{
     {
       margin-bottom: 20px;
       min-height: 430px;
-       @media (max-width: @screen-md-max) {
+       @media (max-width: @screen-sm-max) {
+        margin-bottom: 0;
+        margin-top: 44px;
         min-height: auto;
+      }
+
+       @media (max-width: @screen-xs-max) {
+        margin-top: 0;
       }
     }
     &:nth-child(2)
@@ -812,8 +818,9 @@ html, body{
   .mobile{
     // background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
     // background-blend-mode: screen;
-    background-color: #fafafa !important;
     @media (max-width: @screen-sm-max) and (max-width: @screen-xs-max) {
+      background-color: #fafafa !important;
+
       h2, h3, p{
         color:@theme-grey;
       }
